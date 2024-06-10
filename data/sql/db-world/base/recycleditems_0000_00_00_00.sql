@@ -14,7 +14,7 @@ INSERT INTO `item_template` (`entry`, `class`, `subclass`, `SoundOverrideSubclas
 DELETE FROM `npc_vendor` WHERE `entry`=888999 AND `item`=41178 AND `ExtendedCost`=0;
 INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `ExtendedCost`, `VerifiedBuild`) VALUES (888999, 0, 41178, 0, 0, 0, 0);
 -- Step 1: Create a Spell Entry
-DELETE FROM `spell_template` WHERE `entry`=60000;
+DELETE FROM `item_template` WHERE `entry`=60000;
 INSERT INTO `item_template` (
     `spellid_1`, 
     `name`, 
