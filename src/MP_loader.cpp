@@ -4,6 +4,7 @@
 
 // From SC
 void SC_AddRecycledItemsScripts();
+void SC_AddSC_npcRecycleBot();
 
 // Add all
 // cf. the naming convention https://github.com/azerothcore/azerothcore-wotlk/blob/master/doc/changelog/master.md#how-to-upgrade-4
@@ -11,5 +12,7 @@ void SC_AddRecycledItemsScripts();
 void AddRecycledItemsScripts()
 {
     SC_AddRecycledItemsScripts();
+    SC_npcRecycleBot();
 }
+
 
