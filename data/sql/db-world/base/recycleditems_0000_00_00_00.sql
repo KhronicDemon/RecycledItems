@@ -14,6 +14,15 @@ INSERT INTO `item_template` (`entry`, `class`, `subclass`, `SoundOverrideSubclas
 DELETE FROM `npc_vendor` WHERE `entry`=888999 AND `item`=41178 AND `ExtendedCost`=0;
 INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `ExtendedCost`, `VerifiedBuild`) VALUES (888999, 0, 41178, 0, 0, 0, 0);
 
+-- Insert spell template entry for Summon Recycle Bot spell
+INSERT INTO `spell_template` (`Id`, `Attributes`, `Effect1`, `EffectImplicitTargetA1`, `EffectMiscValueA1`, `DurationIndex`, `RangeIndex`)
+VALUES (60000, 0, 28, 1, 888999, 27, 1);
+
+-- Update item template entry for Remote Recycler to link Summon Recycle Bot spell
+UPDATE `item_template`
+SET `spellid_1` = 60000, `spelltrigger_1` = 0, `spellcharges_1` = 1, `spellppmRate_1` = 0, `spellcooldown_1` = 0, `spellcategory_1` = 0, `spellcategorycooldown_1` = 0
+WHERE `entry` = 41178;
+
 
 /* EXCLUDE THESE QUERIES IF YOU DONT WANT THE RECYCLER THROUGHOUT THE WORLD */
 
